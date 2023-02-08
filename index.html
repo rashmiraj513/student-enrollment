@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+
+    <!-- Favicon Image -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+
+  <body>
+    <header>
+      <section>
+        <h2 class="display-1">Student Enrollment Form</h2>
+      </section>
+    </header>
+    <main>
+      <section id="content">
+        <div id="flexbox-container">
+          <div id="form-container">
+            <form id="form">
+              <div class="grid-container form-group">
+                <label for="student-name">Name</label>
+                <input type="text" name="studentName" id="student-name" placeholder="Enter Full Name" minlength="2"
+                  maxlength="100" required>
+              </div><br>
+              <div class="grid-container form-group">
+                <label for="student-email">Email</label>
+                <input type="email" name="studentEmail" id="student-email" placeholder="email@address.com" required
+                  pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$">
+              </div><br>
+              <div class="grid-container form-group">
+                <label for="student-website">Website</label>
+                <input type="text" name="studentWebsite" id="student-website" placeholder="https://www.website.com"
+                  required
+                  pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+                  title="Must start with http or, https and end with .com/in etc.!">
+              </div><br>
+              <div class="grid-container form-group">
+                <label for="student-image">Image Link</label>
+                <input type="text" name="studentImage" id="student-image" placeholder="https://www.image-link.com"
+                  required
+                  pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+                  title="Must start with http or, https!">
+              </div><br>
+              <div class="grid-container form-group">
+                <label for="radio">Gender</label>
+                <div>
+                  <input type="radio" name="studentGender" id="student-gender-male" value="Male" required>Male</input><br>
+                  <input type="radio" name="studentGender" id="student-gender-female" value="Female">Female</input>
+                </div>
+              </div><br>
+              <div class="grid-container form-group">
+                <label for="checkbox">Skills</label>
+                <div id="check-box">
+                  <input type="checkbox" name="studentSkills" id="student-skills-java" class="skills-checkbox"
+                    value="Java">Java</input>&nbsp;
+                  <input type="checkbox" name="studentSkills" id="student-skills-html" class="skills-checkbox"
+                    value="HTML">HTML</input>&nbsp;
+                  <input type="checkbox" name="studentSkills" id="student-skills-css" class="skills-checkbox"
+                    value="CSS">CSS</input>
+                </div>
+              </div><br>
+              <div id="buttons">
+                <button type="submit" class="btn btn-primary btn-lg">Enroll Student</button>
+                <button type="reset" class="btn btn-danger btn-lg button-placing">Clear</button>
+              </div>
+            </form>
+            <div class="message-container">
+              <h4 id="messages"></h4>
+            </div>
+          </div>
+
+          <div id="line"></div>
+
+          <div id="result-container">
+            <h2 class="display-3">Enrolled Students</h2>
+            <div class="enrolled-students hidden" id="container-list">
+              <table id="table-data">
+                <tr class="row-style">
+                  <th>Description</th>
+                  <th>Image</th>
+                </tr>
+                <tr id="list">
+
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p class="display-2">
+        &#169; <script>document.write(new Date().getFullYear());</script> | Rashmi Raj
+      </p>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
